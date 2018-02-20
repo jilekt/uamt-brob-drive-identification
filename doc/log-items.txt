@@ -1,0 +1,16 @@
+1   [hhmmss.ff]
+2   latitude [ddmm.mmmmmm]
+3   longitute[dddmm.m]
+4   north [m]
+5   east [m]
+6   up [m]
+7   speed_horiz [km/s]
+8   heading [deg]
+9   linear (front) speed [m/s] - setpoint
+10  angular speed  speed [rad/s] - setpoint
+11  motor1 (left) speed [inc/s] - setpoint
+12  motor2 (right) speed [inc/s] - setpoint
+13  motor1 () angle [inc] - measured
+14  motor2 () angle [inc] - measured
+15  motor3 () angle [inc] - measured
+16  motor4 () angle [inc] - measured
