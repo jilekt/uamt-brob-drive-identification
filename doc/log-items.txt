@@ -1,16 +1,24 @@
-1   [hhmmss.ff]
-2   latitude [ddmm.mmmmmm]
-3   longitute[dddmm.m]
-4   north [m]
-5   east [m]
-6   up [m]
-7   speed_horiz [km/s]
-8   heading [deg]
-9   linear (front) speed [m/s] - setpoint
-10  angular speed  speed [rad/s] - setpoint
-11  motor1 (left) speed [inc/s] - setpoint
-12  motor2 (right) speed [inc/s] - setpoint
-13  motor1 () angle [inc] - measured
-14  motor2 () angle [inc] - measured
-15  motor3 () angle [inc] - measured
-16  motor4 () angle [inc] - measured
+id	data		units		src-msg
+--------------------------------------------------------------------------------------------------------------
+1	time.utc	[hhmmss.ff]	nmea.gga
+
+2	pos.latitude	[ddmm.mm]	nmea.gga
+3	pos.longitude	[dddmm.mm]	nmea.gga
+
+4	pos.enu.n	[m]		nmea.vgk
+5	pos.enu.e	[m]		nmea.vgk
+6	pos.enu.u	[m]		nmea.vgk
+
+7	spd.horiz	[km/h]		nmea.vtg
+8	ori.heading	[deg]		nmea.hdt
+
+9	ctrl.rob.spd-l	[m/s]		mnea.sta	# setpoint - linear  speed of robot
+10	ctrl.rob.spd-a	[rad/s]		mnea.sta	# setpoint - angular speed of robot
+
+11	ctrl.mot12.spd	[inc/s]		mnea.clt	# setpoint - raw speed of left  motors #1, #2
+12	ctrl.mot34.spd	[inc/s]		mnea.clt	# setpoint - raw speed of right motors #3, #4
+
+13	meas.mot1.angle	[inc]		nmea.ret	# measured - raw angle of left  motor #1
+14	meas.mot2.angle	[inc]		nmea.ret	# measured - raw angle of left  motor #2
+15	meas.mot3.angle	[inc]		nmea.ret	# measured - raw angle of right motor #3
+16	meas.mot4.angle	[inc]		nmea.ret	# measured - raw angle of right motor #4
